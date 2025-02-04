@@ -66,23 +66,55 @@ Key configuration files:
 
 1. Ensure the server is running on `localhost:8080`.
 
-2. Example request to the SCORING service:
+2. **Example request to the SCORING service:**
 
+   **Using cURL:**
    ```bash
    curl -X POST http://localhost:8080/api/service/scoring \
      -H "Content-Type: application/json" \
      -d '{"customerId": "12345"}'
    ```
 
-3. Example request to the ANALYZER service:
+   **Using Postman:**
+   - Open Postman.
+   - Click **New Request** and select **POST**.
+   - Enter the URL: `http://localhost:8080/api/service/scoring`
+   - Go to the **Headers** tab:
+     - Key: `Content-Type`, Value: `application/json`
+   - Go to the **Body** tab, select **raw** and choose **JSON** from the dropdown.
+   - Add the following JSON:
+     ```json
+     {
+       "customerId": "12345"
+     }
+     ```
+   - Click **Send**.
 
+3. **Example request to the ANALYZER service:**
+
+   **Using cURL:**
    ```bash
    curl -X POST http://localhost:8080/api/service/analyzer \
      -H "Content-Type: application/json" \
      -d '{"data": "sample"}'
    ```
 
-4. Viewing API Responses:
+   **Using Postman:**
+   - Open Postman.
+   - Click **New Request** and select **POST**.
+   - Enter the URL: `http://localhost:8080/api/service/analyzer`
+   - Go to the **Headers** tab:
+     - Key: `Content-Type`, Value: `application/json`
+   - Go to the **Body** tab, select **raw** and choose **JSON** from the dropdown.
+   - Add the following JSON:
+     ```json
+     {
+       "data": "sample"
+     }
+     ```
+   - Click **Send**.
+
+4. **Viewing API Responses:**
 
    Example of a successful response:
    ```json
@@ -105,12 +137,4 @@ To run tests:
 ```bash
 ./mvnw test
 ```
-
-## Contributions
-
-Contributions are welcome. Please open a pull request with a brief description of your changes.
-
-## License
-
-This project is open for use under the specified license (if applicable).
 
