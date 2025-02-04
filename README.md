@@ -28,21 +28,42 @@ In this project, an external SCORING service is used solely for testing the syst
 
 ### Setup and Running the Application
 
-1. Clone the repository:
+1. **Clone the repository:**
+   Make sure you are in the directory where you want to clone the project.
    ```bash
    git clone https://github.com/chaibouchris/CreditoBackend.git
    cd CreditoBackend
    ```
 
-2. Build the project:
-   ```bash
-   ./mvnw clean install
-   ```
+2. **Build the project:**  
+   Ensure you are in the project root directory where the `mvnw` file is located.
+   - **On Linux or macOS:**
+     ```bash
+     ./mvnw clean install
+     ```
+   - **On Windows (PowerShell or CMD):**
+     ```bash
+     mvnw clean install
+     ```
+   - **On Windows (Git Bash):**
+     ```bash
+     ./mvnw clean install
+     ```
 
-3. Run the server:
-   ```bash
-   ./mvnw spring-boot:run
-   ```
+3. **Run the server:**  
+   Ensure you are still in the project directory:
+   - **On Linux or macOS:**
+     ```bash
+     ./mvnw spring-boot:run
+     ```
+   - **On Windows (PowerShell or CMD):**
+     ```bash
+     mvnw spring-boot:run
+     ```
+   - **On Windows (Git Bash):**
+     ```bash
+     ./mvnw spring-boot:run
+     ```
 
    The server will be available at: [http://localhost:8080](http://localhost:8080)
 
@@ -133,8 +154,33 @@ Key configuration files:
 
 ## Running Tests
 
-To run tests:
+To run tests, make sure you are in the root directory of the project where the `mvnw` file is located.
+
+### **On Linux or macOS:**
 ```bash
 ./mvnw test
 ```
+
+### **On Windows (PowerShell or CMD):**
+```bash
+mvnw test
+```
+
+> **Note:** If you are using Git Bash on Windows, you can use the same command as in Linux/macOS:
+```bash
+./mvnw test
+```
+
+Ensure you are in the project folder before running these commands:
+```bash
+cd /path/to/CreditoBackend
+```
+
+## Contributions
+
+Contributions are welcome. Please open a pull request with a brief description of your changes.
+
+## License
+
+This project is open for use under the specified license (if applicable).
 
