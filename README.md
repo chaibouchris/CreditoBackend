@@ -32,7 +32,6 @@ In this project, an external SCORING service is used solely for testing the syst
    Make sure you are in the directory where you want to clone the project.
    ```bash
    git clone https://github.com/chaibouchris/CreditoBackend.git
-   cd CreditoBackend
    ```
 
 2. **Build the project:**  
@@ -49,6 +48,16 @@ In this project, an external SCORING service is used solely for testing the syst
      ```bash
      ./mvnw clean install
      ```
+
+   > **Note:** If you encounter the following error:
+   > ```
+   > Cannot find path '.mvn/wrapper/maven-wrapper.properties' because it does not exist.
+   > ```
+   > Navigate to the project root directory and run:
+   > ```bash
+   > mvn -N io.takari:maven:wrapper
+   > ```
+   > This command will regenerate the missing Maven Wrapper files.
 
 3. **Run the server:**  
    Ensure you are still in the project directory:
@@ -175,12 +184,3 @@ Ensure you are in the project folder before running these commands:
 ```bash
 cd /path/to/CreditoBackend
 ```
-
-## Contributions
-
-Contributions are welcome. Please open a pull request with a brief description of your changes.
-
-## License
-
-This project is open for use under the specified license (if applicable).
-
